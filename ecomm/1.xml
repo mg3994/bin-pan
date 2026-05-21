@@ -1,0 +1,2557 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html
+  b:css="false"
+  b:defaultwidgetversion="2"
+  b:layoutsversion="3"
+  b:responsive="true"
+  expr:dir="data:blog.languageDirection"
+  expr:lang="data:blog.locale"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:b="http://www.google.com/2005/gml/b"
+  xmlns:data="http://www.google.com/2005/gml/data"
+  xmlns:expr="http://www.google.com/2005/gml/expr"
+>
+  <head>
+    <!-- For EU regions -->
+    <script>
+      cookieOptions = {
+       close: &quot;Got it!&quot;,
+       learn: &quot;Privacy Policy&quot;,
+       link: &quot;<data:blog.canonicalHomepageUrl/>p/privacy-policy.html&quot;
+      };
+    </script>
+    <!-- viewport Related Meta tags -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- All Blogger Meta tags Auto added by blogger platform -->
+    <b:include data="blog" name="all-head-content" />
+    <!-- Open Graph Meta tags  -->
+    <meta content="website" property="og:type" />
+    <meta content="IN-HR" name="geo.region" />
+    <meta content="+918607573994" name="contact.phone" />
+    <!-- All Links Related -->
+    <link
+      expr:href="data:blog.homepageUrl.canonical"
+      expr:title="data:messages.home"
+      rel="home"
+    />
+    <link
+      expr:href='data:blog.homepageUrl.canonical path "search"'
+      expr:title="data:messages.search"
+      rel="search"
+    />
+    <!-- content Rating -->
+    <b:if cond="!data:blog.adultContent">
+      <meta content="general" name="rating" />
+    </b:if>
+    <b:if cond="data:blog.adultContent">
+      <meta content="adult" name="rating" />
+    </b:if>
+    <!-- All Canonical links -->
+    <b:tag
+      cond="!data:blog.isMobileRequest and data:view.url ==  data:view.url.canonical"
+      expr:href="data:view.url params {m: 1}"
+      media="only screen and (max-width: 640px)"
+      name="link"
+      rel="alternate"
+    />
+
+    <b:tag
+      cond="data:view.isMultipleItems and data:widgets.Blog.first.posts[0].featuredImage"
+      expr:href="data:widgets.Blog.first.posts[0].featuredImage resizeImage 1600"
+      name="link"
+      rel="image_src"
+    />
+    <b:tag
+      cond="data:view.isSingleItem and data:view.featuredImage"
+      expr:href="data:view.featuredImage resizeImage 1600"
+      name="link"
+      rel="image_src"
+    />
+    <b:if cond="data:blog.analyticsAccountNumber">
+      <!-- Google Analytics TODO -->
+      <b:include data="blog" name="google-analytics" />
+    </b:if>
+
+    <!-- JSON-LD Structured Data -->
+    <b:if cond="data:view.isHomepage">
+      <script type="application/ld+json">
+        {&quot;@context&quot;:&quot;http://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;description&quot;: &quot;<data:view.description.escaped/>&quot;,&quot;url&quot;:&quot;<data:blog.canonicalHomepageUrl/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.canonicalHomepageUrl/>search?q={search_term_string}&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}
+      </script>
+    </b:if>
+    <script type="application/ld+json">
+      {
+       &quot;@context&quot;: &quot;http://schema.org&quot;,
+       &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+       &quot;@id&quot;: &quot;<data:blog.canonicalHomepageUrl/>&quot;,
+       &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+       &quot;itemListElement&quot;: [{
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1,
+          &quot;name&quot;: &quot;Home&quot;,
+          &quot;item&quot;: &quot;<data:blog.canonicalHomepageUrl/>&quot;
+       },
+       {
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2,
+          &quot;name&quot;: &quot;About&quot;,
+          &quot;item&quot;: &quot;<data:blog.canonicalHomepageUrl/>#about&quot;
+       },
+       {
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3,
+          &quot;name&quot;: &quot;Contact Us&quot;,
+          &quot;item&quot;: &quot;<data:blog.canonicalHomepageUrl/>#contact&quot;
+       }
+
+       ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        &quot;@context&quot;: &quot;https://schema.org&quot;,
+        &quot;@type&quot;: &quot;LocalBusiness&quot;,
+        &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+        &quot;url&quot;: &quot;<data:blog.canonicalHomepageUrl/>&quot;,
+        &quot;logo&quot;: &quot;<data:blog.blogspotFaviconUrl/>&quot;,
+        &quot;image&quot;: &quot;<data:blog.blogspotFaviconUrl/>&quot;,
+        &quot;sameAs&quot;: [
+          &quot;https://www.facebook.com/profile.php?id=100082961891641&quot;,
+          &quot;https://www.youtube.com/@Antinna&quot;,
+          &quot;https://www.instagram.com/antinna.yt&quot;,
+          &quot;https://github.com/antinna&quot;,
+          &quot;https://play.google.com/store/apps/dev?id=7417258411166270372&quot;
+        ],
+        &quot;contactPoint&quot;: {
+          &quot;@type&quot;: &quot;ContactPoint&quot;,
+          &quot;telephone&quot;: &quot;+918607573994&quot;,
+          &quot;contactType&quot;: &quot;customer service&quot;,
+          &quot;email&quot;: &quot;contact@antinna.in&quot;,
+          &quot;availableLanguage&quot;: [&quot;en&quot;, &quot;hi&quot;]
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        &quot;@context&quot;: &quot;https://schema.org&quot;,
+        &quot;@type&quot;: &quot;ProfessionalService&quot;,
+        &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+        &quot;image&quot;: &quot;<data:blog.blogspotFaviconUrl/>&quot;,
+        &quot;@id&quot;: &quot;<data:blog.canonicalHomepageUrl/>&quot;,
+        &quot;url&quot;: &quot;<data:blog.canonicalHomepageUrl/>&quot;,
+        &quot;telephone&quot;: &quot;+919813954763&quot;,
+        &quot;priceRange&quot;: &quot;$$&quot;,
+        &quot;address&quot;: {
+        &quot;@type&quot;: &quot;PostalAddress&quot;,
+        &quot;streetAddress&quot;: &quot;H.No. 42, Village:- Todi&quot;,
+        &quot;addressLocality&quot;: &quot;Charkhi Dadri&quot;,
+        &quot;addressRegion&quot;: &quot;Haryana&quot;,
+        &quot;postalCode&quot;: &quot;127310&quot;,
+        &quot;addressCountry&quot;: &quot;IN&quot;
+      },
+        &quot;geo&quot;: {
+          &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+          &quot;latitude&quot;: 28.527867,
+          &quot;longitude&quot;: 76.083600
+        },
+        &quot;openingHoursSpecification&quot;: {
+          &quot;@type&quot;: &quot;OpeningHoursSpecification&quot;,
+          &quot;dayOfWeek&quot;: [
+            &quot;Monday&quot;,
+            &quot;Tuesday&quot;,
+            &quot;Wednesday&quot;,
+            &quot;Thursday&quot;,
+            &quot;Friday&quot;,
+            &quot;Saturday&quot;,
+            &quot;Sunday&quot;
+          ],
+          &quot;opens&quot;: &quot;00:00&quot;,
+          &quot;closes&quot;: &quot;23:59&quot;
+        },
+        &quot;sameAs&quot;: [
+          &quot;https://www.facebook.com/profile.php?id=100082961891641&quot;,
+          &quot;https://www.instagram.com/antinna.yt/&quot;,
+          &quot;https://youtube.com/antinna&quot;,
+          &quot;https://github.com/antinna&quot;,
+          &quot;https://play.google.com/store/apps/dev?id=7417258411166270372&quot;,
+          &quot;<data:blog.canonicalHomepageUrl/>&quot;
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        &quot;@context&quot;: &quot;https://schema.org&quot;,
+        &quot;@type&quot;: &quot;Project&quot;,
+        &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+        &quot;url&quot;: &quot;<data:blog.canonicalHomepageUrl/>&quot;,
+        &quot;logo&quot;: &quot;<data:blog.blogspotFaviconUrl/>&quot;,
+        &quot;contactPoint&quot;: [
+          {
+            &quot;@type&quot;: &quot;ContactPoint&quot;,
+            &quot;telephone&quot;: &quot;+918607573994&quot;,
+            &quot;contactType&quot;: &quot;Technical Support&quot;,
+            &quot;areaServed&quot;: [&quot;US&quot;,&quot;GB&quot;,&quot;CA&quot;,&quot;AF&quot;,&quot;155&quot;,&quot;039&quot;,&quot;154&quot;,&quot;151&quot;,&quot;150&quot;,&quot;145&quot;,&quot;034&quot;,&quot;035&quot;,&quot;030&quot;,&quot;143&quot;,&quot;142&quot;,&quot;419&quot;,&quot;015&quot;,&quot;002&quot;,&quot;ZM&quot;,&quot;YE&quot;,&quot;EH&quot;,&quot;ZW&quot;,&quot;WF&quot;,&quot;VN&quot;,&quot;VE&quot;,&quot;AX&quot;,&quot;AL&quot;,&quot;DZ&quot;,&quot;AS&quot;,&quot;AD&quot;,&quot;AO&quot;,&quot;AQ&quot;,&quot;AI&quot;,&quot;AG&quot;,&quot;AW&quot;,&quot;AM&quot;,&quot;AR&quot;,&quot;AT&quot;,&quot;AU&quot;,&quot;AZ&quot;,&quot;BS&quot;,&quot;BH&quot;,&quot;BD&quot;,&quot;BB&quot;,&quot;BY&quot;,&quot;BE&quot;,&quot;BZ&quot;,&quot;BJ&quot;,&quot;BM&quot;,&quot;BT&quot;,&quot;BO&quot;,&quot;BQ&quot;,&quot;BA&quot;,&quot;BW&quot;,&quot;VA&quot;,&quot;VU&quot;,&quot;UZ&quot;,&quot;UY&quot;,&quot;UM&quot;,&quot;AE&quot;,&quot;UA&quot;,&quot;TV&quot;,&quot;VI&quot;,&quot;UG&quot;,&quot;TC&quot;,&quot;TT&quot;,&quot;TN&quot;,&quot;TR&quot;,&quot;TM&quot;,&quot;TG&quot;,&quot;TK&quot;,&quot;TO&quot;,&quot;TH&quot;,&quot;TZ&quot;,&quot;TJ&quot;,&quot;TW&quot;,&quot;CH&quot;,&quot;SY&quot;,&quot;SE&quot;,&quot;BR&quot;,&quot;BV&quot;,&quot;IO&quot;,&quot;VG&quot;,&quot;BN&quot;,&quot;BG&quot;,&quot;BF&quot;,&quot;BI&quot;,&quot;KH&quot;,&quot;CM&quot;,&quot;CV&quot;,&quot;KY&quot;,&quot;CF&quot;,&quot;TD&quot;,&quot;CL&quot;,&quot;CX&quot;,&quot;CN&quot;,&quot;CC&quot;,&quot;CO&quot;,&quot;KM&quot;,&quot;CK&quot;,&quot;HR&quot;,&quot;CR&quot;,&quot;CU&quot;,&quot;CW&quot;,&quot;CY&quot;,&quot;CZ&quot;,&quot;CD&quot;,&quot;DK&quot;,&quot;DJ&quot;,&quot;DM&quot;,&quot;DO&quot;,&quot;TL&quot;,&quot;EG&quot;,&quot;SV&quot;,&quot;EC&quot;,&quot;GQ&quot;,&quot;EE&quot;,&quot;ER&quot;,&quot;ET&quot;,&quot;FK&quot;,&quot;FO&quot;,&quot;FJ&quot;,&quot;FI&quot;,&quot;GF&quot;,&quot;FR&quot;,&quot;PF&quot;,&quot;TF&quot;,&quot;GA&quot;,&quot;GM&quot;,&quot;SZ&quot;,&quot;SR&quot;,&quot;SJ&quot;,&quot;SD&quot;,&quot;SS&quot;,&quot;ES&quot;,&quot;LK&quot;,&quot;KR&quot;,&quot;GS&quot;,&quot;ZA&quot;,&quot;SO&quot;,&quot;SB&quot;,&quot;SI&quot;,&quot;SK&quot;,&quot;SG&quot;,&quot;SX&quot;,&quot;SL&quot;,&quot;SC&quot;,&quot;SN&quot;,&quot;SA&quot;,&quot;RS&quot;,&quot;PM&quot;,&quot;VC&quot;,&quot;SM&quot;,&quot;WS&quot;,&quot;ST&quot;,&quot;GE&quot;,&quot;DE&quot;,&quot;GH&quot;,&quot;GI&quot;,&quot;GR&quot;,&quot;GL&quot;,&quot;GD&quot;,&quot;GP&quot;,&quot;GT&quot;,&quot;MF&quot;,&quot;LC&quot;,&quot;BL&quot;,&quot;SH&quot;,&quot;KN&quot;,&quot;RW&quot;,&quot;RO&quot;,&quot;RU&quot;,&quot;RE&quot;,&quot;CG&quot;,&quot;PT&quot;,&quot;PL&quot;,&quot;PR&quot;,&quot;QA&quot;,&quot;PH&quot;,&quot;PN&quot;,&quot;GN&quot;,&quot;GG&quot;,&quot;GU&quot;,&quot;GW&quot;,&quot;GY&quot;,&quot;HT&quot;,&quot;HM&quot;,&quot;HN&quot;,&quot;HK&quot;,&quot;HU&quot;,&quot;IS&quot;,&quot;ID&quot;,&quot;IN&quot;,&quot;IR&quot;,&quot;IQ&quot;,&quot;IE&quot;,&quot;IM&quot;,&quot;IT&quot;,&quot;IL&quot;,&quot;JP&quot;,&quot;JO&quot;,&quot;JM&quot;,&quot;JE&quot;,&quot;CI&quot;,&quot;KW&quot;,&quot;KG&quot;,&quot;LA&quot;,&quot;XK&quot;,&quot;KI&quot;,&quot;KE&quot;,&quot;KZ&quot;,&quot;LV&quot;,&quot;LB&quot;,&quot;LS&quot;,&quot;LY&quot;,&quot;LR&quot;,&quot;LT&quot;,&quot;LU&quot;,&quot;LI&quot;,&quot;PY&quot;,&quot;PE&quot;,&quot;PG&quot;,&quot;PA&quot;,&quot;PW&quot;,&quot;PS&quot;,&quot;PK&quot;,&quot;NO&quot;,&quot;OM&quot;,&quot;MP&quot;,&quot;KP&quot;,&quot;NI&quot;,&quot;NE&quot;,&quot;NG&quot;,&quot;NU&quot;,&quot;NF&quot;,&quot;NZ&quot;,&quot;NA&quot;,&quot;NP&quot;,&quot;NL&quot;,&quot;NR&quot;,&quot;NC&quot;,&quot;MM&quot;,&quot;MZ&quot;,&quot;MS&quot;,&quot;MN&quot;,&quot;ME&quot;,&quot;MA&quot;,&quot;MD&quot;,&quot;MC&quot;,&quot;FM&quot;,&quot;MX&quot;,&quot;MR&quot;,&quot;MU&quot;,&quot;YT&quot;,&quot;MQ&quot;,&quot;MH&quot;,&quot;MV&quot;,&quot;ML&quot;,&quot;MT&quot;,&quot;MW&quot;,&quot;MG&quot;,&quot;MY&quot;,&quot;MO&quot;,&quot;MK&quot;],
+            &quot;availableLanguage&quot;: [&quot;en&quot;,&quot;Gujarati&quot;,&quot;Hindi&quot;,&quot;Tamil&quot;,&quot;Telugu&quot;,&quot;Urdu&quot;,&quot;Panjabi&quot;]
+          },
+          {
+            &quot;@type&quot;: &quot;ContactPoint&quot;,
+            &quot;telephone&quot;: &quot;+918607573994&quot;,
+            &quot;contactType&quot;: &quot;customer service&quot;,
+            &quot;areaServed&quot;: [&quot;US&quot;,&quot;GB&quot;,&quot;CA&quot;,&quot;AF&quot;,&quot;155&quot;,&quot;039&quot;,&quot;154&quot;,&quot;151&quot;,&quot;150&quot;,&quot;145&quot;,&quot;034&quot;,&quot;035&quot;,&quot;030&quot;,&quot;143&quot;,&quot;142&quot;,&quot;419&quot;,&quot;015&quot;,&quot;002&quot;,&quot;ZM&quot;,&quot;YE&quot;,&quot;EH&quot;,&quot;ZW&quot;,&quot;WF&quot;,&quot;VN&quot;,&quot;VE&quot;,&quot;AX&quot;,&quot;AL&quot;,&quot;DZ&quot;,&quot;AS&quot;,&quot;AD&quot;,&quot;AO&quot;,&quot;AQ&quot;,&quot;AI&quot;,&quot;AG&quot;,&quot;AW&quot;,&quot;AM&quot;,&quot;AR&quot;,&quot;AT&quot;,&quot;AU&quot;,&quot;AZ&quot;,&quot;BS&quot;,&quot;BH&quot;,&quot;BD&quot;,&quot;BB&quot;,&quot;BY&quot;,&quot;BE&quot;,&quot;BZ&quot;,&quot;BJ&quot;,&quot;BM&quot;,&quot;BT&quot;,&quot;BO&quot;,&quot;BQ&quot;,&quot;BA&quot;,&quot;BW&quot;,&quot;VA&quot;,&quot;VU&quot;,&quot;UZ&quot;,&quot;UY&quot;,&quot;UM&quot;,&quot;AE&quot;,&quot;UA&quot;,&quot;TV&quot;,&quot;VI&quot;,&quot;UG&quot;,&quot;TC&quot;,&quot;TT&quot;,&quot;TN&quot;,&quot;TR&quot;,&quot;TM&quot;,&quot;TG&quot;,&quot;TK&quot;,&quot;TO&quot;,&quot;TH&quot;,&quot;TZ&quot;,&quot;TJ&quot;,&quot;TW&quot;,&quot;CH&quot;,&quot;SY&quot;,&quot;SE&quot;,&quot;BR&quot;,&quot;BV&quot;,&quot;IO&quot;,&quot;VG&quot;,&quot;BN&quot;,&quot;BG&quot;,&quot;BF&quot;,&quot;BI&quot;,&quot;KH&quot;,&quot;CM&quot;,&quot;CV&quot;,&quot;KY&quot;,&quot;CF&quot;,&quot;TD&quot;,&quot;CL&quot;,&quot;CX&quot;,&quot;CN&quot;,&quot;CC&quot;,&quot;CO&quot;,&quot;KM&quot;,&quot;CK&quot;,&quot;HR&quot;,&quot;CR&quot;,&quot;CU&quot;,&quot;CW&quot;,&quot;CY&quot;,&quot;CZ&quot;,&quot;CD&quot;,&quot;DK&quot;,&quot;DJ&quot;,&quot;DM&quot;,&quot;DO&quot;,&quot;TL&quot;,&quot;EG&quot;,&quot;SV&quot;,&quot;EC&quot;,&quot;GQ&quot;,&quot;EE&quot;,&quot;ER&quot;,&quot;ET&quot;,&quot;FK&quot;,&quot;FO&quot;,&quot;FJ&quot;,&quot;FI&quot;,&quot;GF&quot;,&quot;FR&quot;,&quot;PF&quot;,&quot;TF&quot;,&quot;GA&quot;,&quot;GM&quot;,&quot;SZ&quot;,&quot;SR&quot;,&quot;SJ&quot;,&quot;SD&quot;,&quot;SS&quot;,&quot;ES&quot;,&quot;LK&quot;,&quot;KR&quot;,&quot;GS&quot;,&quot;ZA&quot;,&quot;SO&quot;,&quot;SB&quot;,&quot;SI&quot;,&quot;SK&quot;,&quot;SG&quot;,&quot;SX&quot;,&quot;SL&quot;,&quot;SC&quot;,&quot;SN&quot;,&quot;SA&quot;,&quot;RS&quot;,&quot;PM&quot;,&quot;VC&quot;,&quot;SM&quot;,&quot;WS&quot;,&quot;ST&quot;,&quot;GE&quot;,&quot;DE&quot;,&quot;GH&quot;,&quot;GI&quot;,&quot;GR&quot;,&quot;GL&quot;,&quot;GD&quot;,&quot;GP&quot;,&quot;GT&quot;,&quot;MF&quot;,&quot;LC&quot;,&quot;BL&quot;,&quot;SH&quot;,&quot;KN&quot;,&quot;RW&quot;,&quot;RO&quot;,&quot;RU&quot;,&quot;RE&quot;,&quot;CG&quot;,&quot;PT&quot;,&quot;PL&quot;,&quot;PR&quot;,&quot;QA&quot;,&quot;PH&quot;,&quot;PN&quot;,&quot;GN&quot;,&quot;GG&quot;,&quot;GU&quot;,&quot;GW&quot;,&quot;GY&quot;,&quot;HT&quot;,&quot;HM&quot;,&quot;HN&quot;,&quot;HK&quot;,&quot;HU&quot;,&quot;IS&quot;,&quot;ID&quot;,&quot;IN&quot;,&quot;IR&quot;,&quot;IQ&quot;,&quot;IE&quot;,&quot;IM&quot;,&quot;IT&quot;,&quot;IL&quot;,&quot;JP&quot;,&quot;JO&quot;,&quot;JM&quot;,&quot;JE&quot;,&quot;CI&quot;,&quot;KW&quot;,&quot;KG&quot;,&quot;LA&quot;,&quot;XK&quot;,&quot;KI&quot;,&quot;KE&quot;,&quot;KZ&quot;,&quot;LV&quot;,&quot;LB&quot;,&quot;LS&quot;,&quot;LY&quot;,&quot;LR&quot;,&quot;LT&quot;,&quot;LU&quot;,&quot;LI&quot;,&quot;PY&quot;,&quot;PE&quot;,&quot;PG&quot;,&quot;PA&quot;,&quot;PW&quot;,&quot;PS&quot;,&quot;PK&quot;,&quot;NO&quot;,&quot;OM&quot;,&quot;MP&quot;,&quot;KP&quot;,&quot;NI&quot;,&quot;NE&quot;,&quot;NG&quot;,&quot;NU&quot;,&quot;NF&quot;,&quot;NZ&quot;,&quot;NA&quot;,&quot;NP&quot;,&quot;NL&quot;,&quot;NR&quot;,&quot;NC&quot;,&quot;MM&quot;,&quot;MZ&quot;,&quot;MS&quot;,&quot;MN&quot;,&quot;ME&quot;,&quot;MA&quot;,&quot;MD&quot;,&quot;MC&quot;,&quot;FM&quot;,&quot;MX&quot;,&quot;MR&quot;,&quot;MU&quot;,&quot;YT&quot;,&quot;MQ&quot;,&quot;MH&quot;,&quot;MV&quot;,&quot;ML&quot;,&quot;MT&quot;,&quot;MW&quot;,&quot;MG&quot;,&quot;MY&quot;,&quot;MO&quot;,&quot;MK&quot;],
+            &quot;availableLanguage&quot;: [&quot;en&quot;,&quot;Gujarati&quot;,&quot;Hindi&quot;,&quot;Tamil&quot;,&quot;Telugu&quot;,&quot;Urdu&quot;,&quot;Panjabi&quot;]
+          }
+        ],
+        &quot;sameAs&quot;: [
+          &quot;https://www.facebook.com/profile.php?id=100082961891641&quot;,
+          &quot;https://www.instagram.com/antinna.yt/&quot;,
+          &quot;https://youtube.com/antinna&quot;,
+          &quot;https://github.com/antinna&quot;,
+          &quot;https://play.google.com/store/apps/dev?id=7417258411166270372&quot;,
+          &quot;<data:blog.canonicalHomepageUrl/>&quot;
+        ]
+      }
+    </script>
+
+    <title>
+      <data:view.title.escaped/> <b:if cond='data:view.isArchive'>:
+      <data:blog.pageName/>&#65288;<data:messages.archive/>&#65289; <b:elseif
+      cond='data:view.isLabelSearch'/>:
+      <data:blog.pageName/>&#65288;<data:messages.labels/>&#65289; <b:elseif
+      cond='data:view.isSearch'/>: <data:messages.search/> </b:if>
+    </title>
+
+    <meta
+      expr:content="(data:view.isMultipleItems ? data:blog.pageTitle : data:view.title).escaped"
+      name="subject"
+    />
+    <b:if cond="data:blog.metaDescription">
+      <meta expr:content="data:blog.metaDescription" name="description" />
+    </b:if>
+
+    <!-- prettier-ignore -->
+    <b:skin
+    ><![CDATA[
+    
+      :root {
+        --primary: #0284c7;
+        --primary-dark: #0369a1;
+        --accent: #f97316;
+        --accent-dark: #ea580c;
+        --text-dark: #0f172a;
+        --text-light: #64748b;
+        --bg-body: #f8fafc;
+        --white: #ffffff;
+        --border: #e2e8f0;
+        --nav-height: 70px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+      }
+      body {
+        background-color: var(--bg-body);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      body.no-scroll {
+        overflow: hidden;
+      }
+      .navbar {
+        height: var(--nav-height);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0 1rem;
+        transition: var(--transition);
+      }
+      .nav-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-dark);
+        font-weight: 800;
+        font-size: 1.35rem;
+        letter-spacing: -0.5px;
+      }
+      .logo-box {
+        background: transparent;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none; /* optional */
+      }
+      .desktop-links {
+        display: none;
+        gap: 6px;
+        margin-left: 20px;
+      }
+      .nav-item {
+        text-decoration: none;
+        color: var(--text-light);
+        font-size: 0.95rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: var(--transition);
+      }
+      .nav-item:hover,
+      .nav-item.active {
+        background: #f1f5f9;
+        color: var(--primary);
+      }
+      .actions-group {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .icon-btn {
+        background: none;
+        border: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        transition: var(--transition);
+        position: relative;
+      }
+      .icon-btn:hover {
+        background: #f1f5f9;
+        color: var(--primary);
+      }
+      .icon-btn:active {
+        transform: scale(0.95);
+      }
+      .badge {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background: var(--accent);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 700;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4px;
+        border: 2px solid white;
+      }
+      .search-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .search-bar-desktop {
+        display: none;
+        width: 0;
+        overflow: hidden;
+        background: #f1f5f9;
+        border-radius: 20px;
+        transition:
+          width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          padding 0.3s ease;
+        height: 38px;
+        border: 1px solid transparent;
+      }
+      .search-bar-desktop.active {
+        width: 260px;
+        padding: 0 15px;
+        border-color: var(--border);
+        background: white;
+        margin-right: 8px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+      }
+      .search-bar-desktop input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 0.95rem;
+        color: var(--text-dark);
+      } /* Floating Search Suggestions Box */
+      .search-suggestions {
+        position: absolute;
+        top: 48px;
+        right: 0;
+        width: 350px;
+        background: white;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 1050;
+      }
+      .search-suggestions.active {
+        display: flex;
+      }
+      .suggestion-header {
+        padding: 10px 15px;
+        background: #f8fafc;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.8rem;
+        color: var(--text-light);
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      
+      
+      
+      #mobile-search-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--nav-height);
+        background: white;
+        z-index: 1100;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: var(--shadow);
+      }
+      #mobile-search-overlay.active {
+        transform: translateY(0);
+      }
+      .search-overlay-inner {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+      }
+      .search-input-mobile {
+        flex: 1;
+        border: 1px solid var(--border);
+        background: #f1f5f9;
+        padding: 10px 16px;
+        border-radius: 20px;
+        outline: none;
+        font-size: 1rem;
+        color: var(--text-dark);
+        transition: var(--transition);
+      }
+      .search-input-mobile:focus {
+        background: white;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+      } /* Mobile
+      suggestions scroll panel */
+      .mobile-suggestions {
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background: white;
+        max-height: calc(100vh - var(--nav-height));
+        overflow-y: auto;
+        box-shadow: var(--shadow);
+        border-bottom: 1px solid var(--border);
+        display: none;
+      }
+      .mobile-suggestions.active {
+        display: block;
+      }
+      
+      /* Toast
+      notifications */
+      .toast-container {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 2500;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .toast {
+        background: #0f172a;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transform: translateY(100px);
+        opacity: 0;
+        animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+      @keyframes slideUp {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      } /*
+      Modern Google Login Button Styles */
+      .btn-google-login {
+        background: #ffffff;
+        color: var(--text-dark);
+        border: 1.5px solid var(--border);
+        padding: 8px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      }
+      .btn-google-login:hover {
+        background: #f8fafc;
+        border-color: #cbd5e1;
+        transform: translateY(-1px);
+      }
+      .btn-google-login svg {
+        width: 18px;
+        height: 18px;
+      } /* Profile Dropdown Container styling */
+      .profile-container {
+        position: relative;
+      }
+      .profile-dropdown {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 300px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow-lg);
+        display: none;
+        flex-direction: column;
+        padding: 1.25rem;
+        z-index: 1100;
+        animation: dropdownFade 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+      @keyframes dropdownFade {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .profile-dropdown.active {
+        display: flex;
+      }
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .profile-header img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--primary);
+      }
+      .profile-name {
+        font-weight: 800;
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+      .profile-email {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+      .profile-body {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .profile-body-title {
+        font-size: 0.7rem;
+        font-weight: 800;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .profile-uid-box {
+        display: flex;
+        align-items: center;
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 6px 10px;
+        gap: 8px;
+        justify-content: space-between;
+      }
+      .profile-uid {
+        font-family: monospace;
+        font-size: 0.75rem;
+        color: #334155;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        user-select: all;
+      }
+      .btn-copy-uid {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-light);
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-copy-uid:hover {
+        color: var(--primary);
+      }
+      .profile-footer {
+        padding-top: 1rem;
+      }
+      .btn-logout {
+        width: 100%;
+        background: #fef2f2;
+        color: #ef4444;
+        border: 1px solid #fee2e2;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .btn-logout:hover {
+        background: #fee2e2;
+        color: #dc2626;
+      }
+      
+      @media (min-width: 1024px) {
+        .desktop-links {
+          display: flex;
+        }
+        #menu-toggle {
+          display: none;
+        }
+        #mobile-search-btn {
+          display: none;
+        }
+        .search-bar-desktop {
+          display: block;
+        }
+      }
+      .logo-text {
+        text-transform: capitalize;
+      }
+      @media (max-width: 480px) {
+        .logo-text {
+          display: none;
+        }
+        .logo-subtext {
+        display: none;
+        }
+        .btn-google-login {
+          padding: 8px;
+          width: 42px;
+          height: 42px;
+          justify-content: center;
+          border-radius: 50%;
+        }
+        .btn-google-login span {
+          display: none;
+        }
+      }
+      
+      /* Drawer and Mobile Navigation CSS */
+      .mobile-drawer {
+        position: fixed;
+        top: 0;
+        left: -320px;
+        width: 300px;
+        height: 100vh;
+        background: var(--white);
+        box-shadow: var(--shadow-lg);
+        z-index: 2100;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+      }
+      .mobile-drawer.active {
+        transform: translateX(320px);
+      }
+      .drawer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(4px);
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      .drawer-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .drawer-header {
+        height: var(--nav-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .drawer-title {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+      }
+      .drawer-body {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .drawer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .drawer-item {
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 10px 14px;
+        border-radius: 8px;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .drawer-item:hover,
+      .drawer-item.active {
+        background: #f1f5f9;
+        color: var(--primary);
+      }
+      .drawer-divider {
+        height: 1px;
+        background: var(--border);
+      }
+      .drawer-links.secondary .drawer-item {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .drawer-socials {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .drawer-social-title {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--text-light);
+        letter-spacing: 0.5px;
+      }
+      .social-icons {
+        display: flex;
+        gap: 12px;
+      }
+      .social-icon-link {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1.5px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        transition: var(--transition);
+      }
+      .social-icon-link:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+      
+      /* Suggestions list styles */
+      .suggestion-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-bottom: 1px solid var(--border);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .suggestion-item:last-child {
+        border-bottom: none;
+      }
+      .suggestion-item:hover {
+        background: #f8fafc;
+      }
+      .suggestion-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        object-fit: cover;
+        border: 1px solid var(--border);
+      }
+      .suggestion-info {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .suggestion-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .suggestion-price {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .no-suggestions {
+        padding: 15px;
+        font-size: 0.85rem;
+        color: var(--text-light);
+        text-align: center;
+      }
+      
+      /* Toast styling adjustments */
+      .toast.success { border-left: 4px solid #22c55e; }
+      .toast.error { border-left: 4px solid #ef4444; }
+      .toast.info { border-left: 4px solid #3b82f6; }
+      
+      @keyframes slideDown {
+        to {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+      }
+      
+      /* Store and Product Layouts */
+      .store-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: calc(var(--nav-height) + 2rem) 1.5rem 4rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      .store-header {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .store-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        background: linear-gradient(135deg, var(--text-dark), var(--primary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .store-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--white);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border);
+      }
+      .filter-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      .filter-chip {
+        padding: 6px 16px;
+        border-radius: 20px;
+        background: #f1f5f9;
+        color: var(--text-light);
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: var(--transition);
+        border: 1px solid transparent;
+      }
+      .filter-chip:hover {
+        background: #e2e8f0;
+      }
+      .filter-chip.active {
+        background: var(--primary);
+        color: var(--white);
+      }
+      .store-search {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1.5px solid var(--border);
+        outline: none;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 300px;
+        transition: var(--transition);
+      }
+      .store-search:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+      }
+      .store-sort {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1.5px solid var(--border);
+        outline: none;
+        background: var(--white);
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-light);
+        cursor: pointer;
+      }
+      
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .product-card {
+        background: var(--white);
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+        text-decoration: none;
+        position: relative;
+      }
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: rgba(2, 132, 199, 0.3);
+      }
+      .product-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid var(--border);
+        transition: transform 0.5s ease;
+      }
+      .product-card:hover .product-card-img {
+        transform: scale(1.05);
+      }
+      .product-card-body {
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 8px;
+      }
+      .product-card-category {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--primary);
+        letter-spacing: 0.5px;
+      }
+      .product-card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        line-height: 1.4;
+        margin: 0;
+      }
+      .product-card-price {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--accent);
+        margin-top: auto;
+      }
+      .product-card-btn {
+        width: 100%;
+        padding: 10px;
+        background: #f8fafc;
+        color: var(--primary);
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--border);
+        transition: var(--transition);
+      }
+      .product-card:hover .product-card-btn {
+        background: var(--primary);
+        color: var(--white);
+      }
+      
+      /* Detail View */
+      .product-detail-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 1rem;
+      }
+      @media (min-width: 768px) {
+        .product-detail-layout {
+          grid-template-columns: 1.2fr 1fr;
+        }
+      }
+      .detail-gallery {
+        background: var(--white);
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        height: fit-content;
+      }
+      .detail-img {
+        width: 100%;
+        max-height: 480px;
+        object-fit: cover;
+      }
+      .detail-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .detail-badge-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .badge {
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      .badge.category {
+        background: rgba(2, 132, 199, 0.1);
+        color: var(--primary);
+      }
+      .badge.stock {
+        background: rgba(34, 197, 94, 0.1);
+        color: #22c55e;
+      }
+      .badge.out-stock {
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+      }
+      .detail-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        margin: 0;
+      }
+      .detail-price {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+      .detail-desc {
+        color: var(--text-light);
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+      
+      /* Order Form */
+      .order-form-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-md);
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .form-title {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .form-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--text-light);
+      }
+      .form-input {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1.5px solid var(--border);
+        outline: none;
+        font-size: 0.9rem;
+        transition: var(--transition);
+      }
+      .form-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .btn-location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        background: #f1f5f9;
+        color: var(--text-dark);
+        border: 1.5px solid var(--border);
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .btn-location:hover {
+        background: #e2e8f0;
+      }
+      .btn-checkout {
+        background: var(--primary);
+        color: var(--white);
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .btn-checkout:hover {
+        background: var(--primary-dark);
+        transform: translateY(-1px);
+      }
+      .btn-checkout:disabled {
+        background: #cbd5e1;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .sentinel {
+        height: 20px;
+        margin: 2rem 0;
+      }
+      .spinner {
+        width: 30px;
+        height: 30px;
+        border: 3px solid rgba(2, 132, 199, 0.1);
+        border-radius: 50%;
+        border-top-color: var(--primary);
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+     ]]> 
+     </b:skin>
+
+
+    >
+  </head>
+  <body>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <span class="drawer-title">Antinna Menu</span>
+        <button class="icon-btn" id="close-drawer-btn" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-body">
+        <div class="drawer-links">
+          <a href="/" class="drawer-item">Home</a>
+          <a href="/p/store.html" class="drawer-item">Products</a>
+          <a href="/p/service.html" class="drawer-item">Book Repairs</a>
+        </div>
+        <div class="drawer-divider"></div>
+        <div class="drawer-links secondary">
+          <a href="/p/privacy-policy.html" class="drawer-item">Privacy Policy</a>
+          <a href="/p/terms-conditions.html" class="drawer-item">Terms &amp; Conditions</a>
+          <a href="/p/refund-cancellation.html" class="drawer-item">Refund Policy</a>
+          <a href="/p/disclaimer.html" class="drawer-item">Disclaimer</a>
+        </div>
+        <div class="drawer-divider"></div>
+        <div class="drawer-socials">
+          <span class="drawer-social-title">Follow Us</span>
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@Antinna" target="_blank" class="social-icon-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://www.instagram.com/antinna.yt" target="_blank" class="social-icon-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100082961891641" target="_blank" class="social-icon-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://play.google.com/store/apps/dev?id=7417258411166270372" target="_blank" class="social-icon-link" aria-label="Play Store">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+
+    <b:section class="main1" id="main1" showaddelement="yes"> </b:section>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <!-- Hamburger Trigger -->
+          <button
+            class="icon-btn"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <a expr:href="data:blog.homepageUrl.canonical" class="logo">
+            <!-- Favicon Container -->
+            <div
+              class="logo-box"
+              style="width: 28px; height: 28px; margin-bottom: 4px"
+            >
+              <img
+                expr:src="data:blog.blogspotFaviconUrl"
+                alt="logo"
+                style="width: 100%; height: 100%; object-fit: contain"
+              />
+            </div>
+
+            <!-- Title and Subtitle Group -->
+            <div
+              style="display: flex; flex-direction: column; line-height: 1.1"
+            >
+              <span
+                class="logo-text"
+                style="
+                  font-size: 18px;
+                  font-weight: 600;
+                  color: var(--text-color);
+                "
+                ><data:blog.title
+              /></span>
+              <span
+                class="logo-subtext"
+                style="
+                  font-family:
+                    -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;,
+                    Roboto, Helvetica, Arial, sans-serif;
+                  font-size: 9px;
+                  font-weight: 400;
+                  font-style: italic;
+                  color: #3c6522;
+                  letter-spacing: 0.17px;
+                  text-transform: uppercase;
+                "
+                >Parts &amp; Repair</span
+              >
+            </div>
+          </a>
+          <div class="desktop-links">
+            <a
+              expr:class='data:view.url == data:blog.homepageUrl.canonical ? "nav-item active" : "nav-item"'
+              expr:href="data:blog.homepageUrl.canonical"
+              id="nav-home"
+              >Home</a
+            >
+            <a
+              expr:class='data:view.url contains "/p/store.html" ? "nav-item active" : "nav-item"'
+              href="/p/store.html"
+              >Products</a
+            >
+            <a
+              expr:class='data:view.url contains "/p/service.html" ? "nav-item active" : "nav-item"'
+              href="/p/service.html"
+              >Book Repairs</a
+            >
+          </div>
+        </div>
+
+        <!-- Action Buttons Group (Fixed order: Search, Cart, Notification, Profile) -->
+        <div class="actions-group">
+          <!-- Search Icon First (Triggers sliding text-input on desktop, Overlay on mobile) -->
+          <div class="search-wrapper">
+            <div class="search-bar-desktop" id="desktop-search-container">
+              <input
+                type="text"
+                placeholder="Search pipes, tools, services..."
+                id="desktop-search-input"
+              />
+            </div>
+            <button
+              class="icon-btn"
+              id="search-trigger-btn"
+              aria-label="Toggle search bar"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            <!-- Floating Dropdown Suggestions on Desktop -->
+            <div class="search-suggestions" id="desktop-suggestions">
+              <div class="suggestion-header">Suggestions</div>
+              <div id="desktop-suggestions-list"></div>
+            </div>
+          </div>
+
+          <!-- Shopping Cart Action -->
+          <button
+            class="icon-btn"
+            id="cart-trigger-btn"
+            aria-label="Open Shopping Cart"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+            <span class="badge" id="cart-badge" style="display: none">0</span>
+          </button>
+
+          <!-- Notifications Panel -->
+          <button
+            class="icon-btn"
+            id="notification-trigger"
+            aria-label="Notifications"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge" style="background: #ef4444">1</span>
+          </button>
+
+          <!-- Dynamic Authentication Container (Single Mode: Google PopUp) -->
+          <div class="profile-container" id="auth-profile-container">
+            <!-- Dynamic Auth View gets painted here by JS -->
+            <button class="btn-google-login" id="google-login-btn-initial">
+              <svg viewBox="0 0 24 24">
+                <path
+                  fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                />
+              </svg>
+              <span>Sign In</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Search Overlay (Prevents shifting other icons) -->
+      <div id="mobile-search-overlay">
+        <div class="search-overlay-inner">
+          <button
+            class="icon-btn"
+            id="close-search-mobile"
+            aria-label="Close search overlay"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <input
+            type="text"
+            class="search-input-mobile"
+            id="mobile-input"
+            placeholder="Search products or services..."
+          />
+          <button
+            class="icon-btn"
+            id="clear-search-btn"
+            aria-label="Clear search input"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Suggestions list below input -->
+        <div class="mobile-suggestions" id="mobile-suggestions">
+          <div class="suggestion-header" style="padding: 15px">Suggestions</div>
+          <div id="mobile-suggestions-list"></div>
+        </div>
+      </div>
+    </nav>
+  </body>
+
+  <script type="module">//<![CDATA[
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import {
+      getAuth,
+      signInWithPopup,
+      GoogleAuthProvider,
+      onAuthStateChanged,
+      signOut,
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import {
+      getMessaging,
+      getToken,
+      onMessage,
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging.js";
+
+    // Dynamic environment fallback resolution parsing
+    let firebaseConfig = {};
+    try {
+      if (typeof __firebase_config !== "undefined") {
+        firebaseConfig = JSON.parse(__firebase_config);
+      } else {
+        firebaseConfig = {
+          apiKey: "AIzaSyDtRB-0S8VNgY-HoQYAAvkLX7iOAK-K-i0",
+          authDomain: "antinnamain.firebaseapp.com",
+          projectId: "antinnamain",
+          storageBucket: "antinnamain.appspot.com",
+          messagingSenderId: "907520801915",
+          appId: "1:907520801915:web:5a99962f7ce400da54b6de",
+        };
+      }
+    } catch (e) {
+      console.error(
+        "Critical: Failed to resolve core Firebase configurations.",
+        e,
+      );
+    }
+
+    // Initialize application nodes securely
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+
+    // Global Messaging Instantiation References
+    const messaging = getMessaging(app);
+
+    // Global reference placeholder to tie our Cloudflare worker context down
+    let cfWorkerRegistration = null;
+    const APPS_SCRIPT_URL =
+      "https://script.google.com/macros/s/YOUR_DEPLOYED_WEB_APP_ID/exec";
+
+    // Resolve persistent unique browser profile instance ID
+    let browserClientId = localStorage.getItem("antinna_browser_client_id");
+    if (!browserClientId) {
+      browserClientId =
+        "client-" +
+        Math.random().toString(36).substring(2, 15) +
+        "-" +
+        Date.now().toString(36);
+      localStorage.setItem("antinna_browser_client_id", browserClientId);
+    }
+    // Proactively backmount the service worker loop on execution start
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/firebase-messaging-sw.js", { scope: "/" })
+          .then((reg) =>
+            console.log("FCM Worker ready state bound with scope:", reg.scope),
+          )
+          .catch((err) =>
+            console.error("Worker registration structural failure:", err),
+          );
+      });
+    }
+    /**
+     * REACTIVE CORE: Synchronizes latest tokens to backend database arrays
+     * Safe to run anytime, under any state transition scenario.
+     */
+    async function autoSyncDeviceSession(currentUserInstance) {
+      if (!messaging) return;
+      if (Notification.permission === "denied") {
+        console.warn(
+          "Notification permissions blocked by browser configuration.",
+        );
+        return;
+      }
+
+      const userIdentifier = currentUserInstance
+        ? currentUserInstance.uid
+        : "guest";
+      const syncSessionKey = `antinna_sync_lock_${userIdentifier}`;
+
+      // Check lock state BEFORE requesting token promises
+      if (sessionStorage.getItem(syncSessionKey) === "active") {
+        console.log(
+          `[Sync Ignored] State lock for ${userIdentifier} already active.`,
+        );
+        return;
+      }
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission !== "granted") return;
+
+        const activeRegistration = await navigator.serviceWorker.ready;
+        const registrationToken = await getToken(messaging, {
+          vapidKey:
+            "BA2CnO0uBsc7Ikc9LHyaY92oY1IGmTFLYemtw7uWSPrWHUP6SibSpMka0Hif5QibHqsHO7dbUPpto87m1fTEKr0",
+          serviceWorkerRegistration: activeRegistration,
+        });
+
+        if (registrationToken) {
+          let detectedClient = "Web Browser";
+          if (navigator.userAgent.indexOf("Chrome") > -1)
+            detectedClient = "Chrome";
+          else if (navigator.userAgent.indexOf("Safari") > -1)
+            detectedClient = "Safari";
+          else if (navigator.userAgent.indexOf("Firefox") > -1)
+            detectedClient = "Firefox";
+          if (navigator.userAgent.indexOf("Mobile") > -1)
+            detectedClient += " (Mobile)";
+
+          // Clean up conditions to a unified if-else architecture branch
+          if (currentUserInstance) {
+            try {
+              const idToken = await currentUserInstance.getIdToken();
+              dispatchSyncPayload({
+                action: "SYNC_DEVICE",
+                clientId: browserClientId,
+                idToken: idToken,
+                deviceToken: registrationToken,
+                clientName: detectedClient,
+              });
+              sessionStorage.setItem(syncSessionKey, "active");
+            } catch (err) {
+              console.error("Failed fetching secure token proof:", err);
+            }
+          } else {
+            // Guest block structure logic
+            dispatchSyncPayload({
+              action: "SYNC_DEVICE",
+              clientId: browserClientId,
+              idToken: "guest_session",
+              deviceToken: registrationToken,
+              clientName: detectedClient,
+            });
+            sessionStorage.setItem(syncSessionKey, "active");
+          }
+        }
+      } catch (err) {
+        console.error("Central synchronization sequence blocked:", err);
+      }
+    }
+
+    function dispatchSyncPayload(payload) {
+      fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch((err) => console.error("Database tracking relay failure:", err));
+    }
+
+    // Handle incoming tracking notifications foreground context alerts
+    onMessage(messaging, (payload) => {
+      console.log("Foreground tracking alert frame:", payload);
+      if (typeof showToast === "function") {
+        if (payload.notification) {
+          showToast(
+            `${payload.notification.title}: ${payload.notification.body}`,
+            "info",
+          );
+        }
+      }
+    });
+
+    // DOM Target Nodes
+    const authContainer = document.getElementById("auth-profile-container");
+
+    /**
+     * Executes authentication pop-up lifecycle sequence
+     */
+    async function handleLogin() {
+      try {
+        const loginBtn = document.getElementById("google-login-btn-initial");
+        if (loginBtn) {
+          loginBtn.disabled = true;
+          loginBtn.style.opacity = "0.7";
+        }
+        await signInWithPopup(auth, provider);
+        if (typeof showToast === "function") {
+          showToast("Secure login established successfully!", "success");
+        }
+      } catch (error) {
+        console.error("Authentication Error Matrix:", error);
+        if (typeof showToast === "function") {
+          if (error.code === "auth/popup-closed-by-user") {
+            showToast("Sign-in context aborted by user.", "error");
+          } else {
+            showToast("Failed to establish validation session.", "error");
+          }
+        }
+      } finally {
+        const loginBtn = document.getElementById("google-login-btn-initial");
+        if (loginBtn) {
+          loginBtn.disabled = false;
+          loginBtn.style.opacity = "1";
+        }
+      }
+    }
+
+    /**
+     * Terminate active validation container context
+     */
+    async function handleLogout() {
+      try {
+        const currentUserInstance = auth.currentUser;
+        const userIdentifier = currentUserInstance
+          ? currentUserInstance.uid
+          : "guest";
+        // Disconnect browser token context tracking before closing out identity hooks
+        dispatchSyncPayload({
+          //TODO: LOGOUT DELETE
+          //todo
+          action: "LOGOUT_DEVICE",
+          clientId: browserClientId,
+        });
+        // Wipe persistent route locks completely during explicit identity sign-out shifts
+        sessionStorage.removeItem(`antinna_sync_lock_${userIdentifier}`);
+        sessionStorage.removeItem("antinna_sync_lock_guest");
+        await signOut(auth);
+        if (typeof showToast === "function") {
+          showToast("Session signed out cleanly.", "info");
+        }
+      } catch (error) {
+        console.error("SignOut pipeline exception execution:", error);
+        if (typeof showToast === "function") {
+          showToast("Failed to safely terminate session data flow.", "error");
+        }
+      }
+    }
+
+    /**
+     * Toggles profile summary inspector visibility dropdown states
+     */
+    function toggleProfileDropdown(event) {
+      event.stopPropagation();
+      const dropdown = document.getElementById("profile-dropdown-menu");
+      if (dropdown) {
+        dropdown.classList.toggle("active");
+      }
+    }
+
+    /**
+     * Copy User Unique ID context string buffer to clipboard securely
+     */
+    async function copyUserUID(uid) {
+      try {
+        await navigator.clipboard.writeText(uid);
+        if (typeof showToast === "function") {
+          showToast("UID parsed and copied to clipboard!", "success");
+        }
+      } catch (err) {
+        console.error(
+          "Failed writing explicit buffer strings to clipboard",
+          err,
+        );
+      }
+    }
+
+    /**
+     * High Performance Interface Painter updating targets reactive to authentication state
+     */
+    function renderAuthState(user) {
+      if (!authContainer) return;
+
+      // 1. ANCHOR STATE: User is Unauthenticated (Render initial clean Sign-In template node)
+      if (!user) {
+        authContainer.innerHTML = `
+          <button class="btn-google-login" id="google-login-btn-initial">
+            <svg viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span>Sign In</span>
+          </button>
+        `;
+
+        const initialBtn = document.getElementById("google-login-btn-initial");
+        if (initialBtn) {
+          initialBtn.addEventListener("click", handleLogin);
+        }
+        return;
+      }
+
+      // 2. ACTIVE STATE: User Profile Loaded
+      const userAvatar =
+        user.photoURL ||
+        "https://www.gravatar.com/avatar/00000000000000000000000000000000";
+      const userEmail = user.email || "anonymous@antinna.in";
+      const userName = user.displayName || "Antinna Member";
+
+      // Resolve phone number if explicitly bound to the social auth account profile
+      // Resolve phone number safely for Blogger XML
+      let linkedPhoneNumber = user.phoneNumber || null;
+      if (!linkedPhoneNumber) {
+        if (user.providerData) {
+          const providerMatch = user.providerData.find(
+            (info) => info.phoneNumber,
+          );
+          if (providerMatch) {
+            linkedPhoneNumber = providerMatch.phoneNumber;
+          }
+        }
+      }
+
+      // Conditional block: Generate UI element string ONLY if phone metadata string exists
+      const phoneMarkup = linkedPhoneNumber
+        ? `<div class="profile-phone" style="font-size: 12px; color: var(--text-muted); margin-top: 2px; display: flex; align-items: center; gap: 4px;">
+             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+             <span>${linkedPhoneNumber}</span>
+           </div>`
+        : "";
+
+      authContainer.innerHTML = `
+        <div class="profile-container">
+          <button class="icon-btn" id="profile-avatar-trigger" aria-label="Toggle user account dropdown" style="padding: 0; overflow: hidden; border: 2px solid var(--border);">
+            <img src="${userAvatar}" alt="${userName}" style="width: 100%; height: 100%; object-fit: cover;" />
+          </button>
+          
+          <div class="profile-dropdown" id="profile-dropdown-menu">
+            <div class="profile-header">
+              <img src="${userAvatar}" alt="${userName}" />
+              <div>
+                <div class="profile-name">${userName}</div>
+                <div class="profile-email">${userEmail}</div>
+                ${phoneMarkup}
+              </div>
+            </div>
+            <div class="profile-body">
+              <span class="profile-body-title">Account Token Metadata ID</span>
+              <div class="profile-uid-box">
+                <span class="profile-uid" id="profile-uid-string-val">${user.uid}</span>
+                <button class="btn-copy-uid" id="profile-copy-uid-action-btn" title="Copy Unique Account Token ID">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="profile-footer">
+              <button class="btn-logout" id="profile-signout-action-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>Logout Session</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Safe separate listeners binding sequence
+      const avatarTrigger = document.getElementById("profile-avatar-trigger");
+      if (avatarTrigger) {
+        avatarTrigger.addEventListener("click", toggleProfileDropdown);
+      }
+
+      const signoutBtn = document.getElementById("profile-signout-action-btn");
+      if (signoutBtn) {
+        signoutBtn.addEventListener("click", handleLogout);
+      }
+
+      const copyBtn = document.getElementById("profile-copy-uid-action-btn");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", () => copyUserUID(user.uid));
+      }
+    }
+
+    // Global document dismissal click tracking system
+    document.addEventListener("click", (e) => {
+      const dropdown = document.getElementById("profile-dropdown-menu");
+      const avatarTrigger = document.getElementById("profile-avatar-trigger");
+
+      if (dropdown) {
+        if (dropdown.classList.contains("active")) {
+          if (!dropdown.contains(e.target)) {
+            if (avatarTrigger) {
+              if (!avatarTrigger.contains(e.target)) {
+                dropdown.classList.remove("active");
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // ----------------------------------------------------
+    // FRONTEND INTERACTIVE LOGIC (NAVBAR & INTERACTION)
+    // ----------------------------------------------------
+
+    // 1. Mobile Drawer Navigation Setup
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileDrawer = document.getElementById("mobile-drawer");
+    const drawerOverlay = document.getElementById("drawer-overlay");
+    const closeDrawerBtn = document.getElementById("close-drawer-btn");
+
+    function toggleDrawer() {
+      if (!mobileDrawer || !drawerOverlay) return;
+      mobileDrawer.classList.toggle("active");
+      drawerOverlay.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+    }
+
+    if (menuToggle) menuToggle.addEventListener("click", toggleDrawer);
+    if (drawerOverlay) drawerOverlay.addEventListener("click", toggleDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener("click", toggleDrawer);
+
+    // 2. Search Integration & Suggestions Auto-Complete Toggles
+    const searchTriggerBtn = document.getElementById("search-trigger-btn");
+    const desktopSearchContainer = document.getElementById("desktop-search-container");
+    const desktopSearchInput = document.getElementById("desktop-search-input");
+    const mobileSearchOverlay = document.getElementById("mobile-search-overlay");
+    const mobileInput = document.getElementById("mobile-input");
+    const closeSearchMobile = document.getElementById("close-search-mobile");
+    const clearSearchBtn = document.getElementById("clear-search-btn");
+
+    if (searchTriggerBtn) {
+      searchTriggerBtn.addEventListener("click", () => {
+        if (window.innerWidth >= 1024) {
+          if (desktopSearchContainer) {
+            desktopSearchContainer.classList.toggle("active");
+            if (desktopSearchContainer.classList.contains("active") && desktopSearchInput) {
+              desktopSearchInput.focus();
+            }
+          }
+        } else {
+          if (mobileSearchOverlay) {
+            mobileSearchOverlay.classList.add("active");
+            if (mobileInput) mobileInput.focus();
+          }
+        }
+      });
+    }
+
+    if (closeSearchMobile) {
+      closeSearchMobile.addEventListener("click", () => {
+        mobileSearchOverlay.classList.remove("active");
+        const suggestions = document.getElementById("mobile-suggestions");
+        if (suggestions) suggestions.classList.remove("active");
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener("click", () => {
+        if (mobileInput) mobileInput.value = "";
+        const suggestionsList = document.getElementById("mobile-suggestions-list");
+        if (suggestionsList) suggestionsList.innerHTML = "";
+        const suggestions = document.getElementById("mobile-suggestions");
+        if (suggestions) suggestions.classList.remove("active");
+      });
+    }
+
+    // 3. Debounced Product Search Suggestions Fetches
+    function debounce(func, wait) {
+      let timeout;
+      return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+
+    async function fetchSearchSuggestions(query, listContainerId, wrapperId) {
+      const listContainer = document.getElementById(listContainerId);
+      const wrapper = document.getElementById(wrapperId);
+      if (!listContainer || !wrapper) return;
+
+      if (!query.trim()) {
+        listContainer.innerHTML = "";
+        wrapper.classList.remove("active");
+        return;
+      }
+
+      try {
+        const response = await fetch(`${APPS_SCRIPT_URL}?action=list_products&limit=5&search=${encodeURIComponent(query)}`);
+        if (!response.ok) throw new Error("API status error");
+        const data = await response.json();
+
+        if (data.success && data.products && data.products.length > 0) {
+          listContainer.innerHTML = data.products.map(product => `
+            <a href="/p/products.html?id=${product.product_id}" class="suggestion-item">
+              <img src="${product.image_url || 'https://via.placeholder.com/40'}" alt="${product.title}" class="suggestion-img" />
+              <div class="suggestion-info">
+                <span class="suggestion-title">${product.title}</span>
+                <span class="suggestion-price">₹${product.price}</span>
+              </div>
+            </a>
+          `).join("");
+        } else {
+          listContainer.innerHTML = `<div class="no-suggestions">No results found for "${query}"</div>`;
+        }
+        wrapper.classList.add("active");
+      } catch (err) {
+        console.warn("Backend suggestions offline / configuration placeholder active:", err);
+        listContainer.innerHTML = `<div class="no-suggestions">Matches details lookup is offline</div>`;
+        wrapper.classList.add("active");
+      }
+    }
+
+    const handleDesktopSearchInput = debounce((e) => {
+      fetchSearchSuggestions(e.target.value, "desktop-suggestions-list", "desktop-suggestions");
+    }, 300);
+
+    const handleMobileSearchInput = debounce((e) => {
+      fetchSearchSuggestions(e.target.value, "mobile-suggestions-list", "mobile-suggestions");
+    }, 300);
+
+    if (desktopSearchInput) {
+      desktopSearchInput.addEventListener("input", handleDesktopSearchInput);
+    }
+
+    if (mobileInput) {
+      mobileInput.addEventListener("input", handleMobileSearchInput);
+    }
+
+    // Dismiss desktop suggestions on outside click
+    document.addEventListener("click", (e) => {
+      const desktopSuggestions = document.getElementById("desktop-suggestions");
+      if (desktopSuggestions && desktopSearchContainer) {
+        if (!desktopSearchContainer.contains(e.target) && !desktopSuggestions.contains(e.target)) {
+          desktopSuggestions.classList.remove("active");
+        }
+      }
+    });
+
+    // 4. Client Cart Drawer Placeholder Click Handler
+    const cartTrigger = document.getElementById("cart-trigger-btn");
+    if (cartTrigger) {
+      cartTrigger.addEventListener("click", () => {
+        showToast("Shopping Cart is empty. Select products in Store.", "info");
+      });
+    }
+
+    // 5. Dynamic Interactive Toast Generator System
+    function showToast(message, type = "info") {
+      let container = document.getElementById("toast-container");
+      if (!container) {
+        container = document.createElement("div");
+        container.id = "toast-container";
+        container.className = "toast-container";
+        document.body.appendChild(container);
+      }
+      
+      const toast = document.createElement("div");
+      toast.className = `toast ${type}`;
+      
+      let icon = "";
+      if (type === "success") {
+        icon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+      } else if (type === "error") {
+        icon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`;
+      } else {
+        icon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+      }
+      
+      toast.innerHTML = `${icon}<span>${message}</span>`;
+      container.appendChild(toast);
+      
+      setTimeout(() => {
+        toast.style.animation = "slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards";
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 3500);
+    }
+    window.showToast = showToast;
+
+    // ----------------------------------------------------
+    // STORE & PRODUCTS ROUTER & ENGINE
+    // ----------------------------------------------------
+    let currentStoreOffset = 0;
+    const storeLimit = 12;
+    let storeHasMore = true;
+    let storeLoading = false;
+    let storeObserver = null;
+    let currentCategory = "";
+    let currentSort = "created_at_desc";
+    let currentSearch = "";
+
+    async function initStoreRouter() {
+      const path = window.location.pathname;
+      if (!path.includes("/p/products.html") && !path.includes("/p/store.html")) {
+        return;
+      }
+
+      let main = document.getElementById("store-main-layout");
+      if (!main) {
+        main = document.createElement("main");
+        main.id = "store-main-layout";
+        main.className = "store-container";
+        document.body.insertBefore(main, document.querySelector("script"));
+      }
+
+      const section = document.getElementById("main1");
+      if (section) section.style.display = "none";
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+
+      if (productId) {
+        await renderSingleProductPage(main, productId);
+      } else {
+        await renderAllProductsPage(main);
+      }
+    }
+
+    async function renderSingleProductPage(container, id) {
+      container.innerHTML = `
+        <div class="store-header">
+          <a href="/p/store.html" style="font-weight:700; color:var(--primary); display:flex; align-items:center; gap:6px; text-decoration:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            Back to Store
+          </a>
+        </div>
+        <div class="spinner" id="detail-loading-spinner"></div>
+      `;
+
+      try {
+        const response = await fetch(`${APPS_SCRIPT_URL}?action=get_product&id=${encodeURIComponent(id)}`);
+        if (!response.ok) throw new Error("Product fetch failed");
+        const data = await response.json();
+
+        if (!data.success || !data.product) {
+          container.innerHTML = `
+            <div style="text-align:center; padding:4rem 0;">
+              <h2 style="font-weight:800; color:var(--text-dark);">Product Not Found</h2>
+              <p style="color:var(--text-light); margin:10px 0 20px;">The product you are looking for does not exist or has been removed.</p>
+              <a href="/p/store.html" class="btn-checkout" style="display:inline-flex; width:auto; text-decoration:none;">Browse All Products</a>
+            </div>
+          `;
+          return;
+        }
+
+        const p = data.product;
+        const inStock = parseInt(p.stock) > 0;
+
+        container.innerHTML = `
+          <div class="store-header">
+            <a href="/p/store.html" style="font-weight:700; color:var(--primary); display:flex; align-items:center; gap:6px; text-decoration:none; margin-bottom:1rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              Back to Store
+            </a>
+          </div>
+          <div class="product-detail-layout">
+            <div class="detail-gallery">
+              <img src="${p.image_url || 'https://via.placeholder.com/600'}" alt="${p.title}" class="detail-img" />
+            </div>
+            <div class="detail-content">
+              <div class="detail-badge-row">
+                <span class="badge category">${p.category || 'General'}</span>
+                <span class="badge stock ${inStock ? '' : 'out-stock'}">${inStock ? 'In Stock' : 'Out of Stock'}</span>
+              </div>
+              <h1 class="detail-title">${p.title}</h1>
+              <div class="detail-price">₹${p.price}</div>
+              <p class="detail-desc">${p.description || 'No description available for this item.'}</p>
+              
+              <div class="order-form-card">
+                <h3 class="form-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Delivery & Order Details
+                </h3>
+                
+                <div class="form-group">
+                  <label class="form-label" for="shipping-phone">Shipping Phone Number *</label>
+                  <input type="tel" class="form-input" id="shipping-phone" placeholder="e.g. +91 98765 43210" required />
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="shipping-address">Full Delivery Address *</label>
+                  <textarea class="form-input" id="shipping-address" rows="3" placeholder="Street Address, Landmark, City, Pincode" style="resize:vertical;" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="shipping-notes">Delivery Note (Optional)</label>
+                  <input type="text" class="form-input" id="shipping-notes" placeholder="e.g. Leave at gate, Call before arrival" />
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Drop Pin / Coordinate Verification *</label>
+                  <button type="button" class="btn-location" id="btn-get-location">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Detect My Location
+                  </button>
+                  <div class="form-row" style="margin-top: 8px;">
+                    <div style="font-size:0.75rem; color:var(--text-light);">Lat: <span id="loc-lat" style="font-weight:700;">Not detected</span></div>
+                    <div style="font-size:0.75rem; color:var(--text-light);">Lng: <span id="loc-lng" style="font-weight:700;">Not detected</span></div>
+                  </div>
+                  <div id="distance-indicator" style="font-size:0.8rem; font-weight:700; margin-top:4px; display:none;"></div>
+                </div>
+
+                <button class="btn-checkout" id="btn-place-order" ${inStock ? '' : 'disabled'}>
+                  ${inStock ? 'Place Order' : 'Out of Stock'}
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        let coordinates = { lat: null, lng: null };
+        const btnGetLoc = document.getElementById("btn-get-location");
+        const latSpan = document.getElementById("loc-lat");
+        const lngSpan = document.getElementById("loc-lng");
+        const distIndicator = document.getElementById("distance-indicator");
+
+        if (btnGetLoc) {
+          btnGetLoc.addEventListener("click", () => {
+            btnGetLoc.disabled = true;
+            btnGetLoc.innerHTML = `<div class="spinner" style="width:16px; height:16px; margin:0;"></div> Detecting...`;
+            
+            navigator.geolocation.getCurrentPosition(
+              (position) => {
+                coordinates.lat = position.coords.latitude;
+                coordinates.lng = position.coords.longitude;
+                latSpan.textContent = coordinates.lat.toFixed(6);
+                lngSpan.textContent = coordinates.lng.toFixed(6);
+                btnGetLoc.disabled = false;
+                btnGetLoc.innerHTML = `
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Location Synced
+                `;
+                btnGetLoc.style.background = "#dcfce7";
+                btnGetLoc.style.borderColor = "#22c55e";
+
+                const merchantLat = 28.527867;
+                const merchantLng = 76.083600;
+                
+                const R = 6371; 
+                const dLat = (coordinates.lat - merchantLat) * Math.PI / 180;
+                const dLng = (coordinates.lng - merchantLng) * Math.PI / 180;
+                const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                          Math.cos(merchantLat * Math.PI / 180) * Math.cos(coordinates.lat * Math.PI / 180) *
+                          Math.sin(dLng/2) * Math.sin(dLng/2);
+                const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+                const distance = R * c;
+
+                distIndicator.style.display = "block";
+                if (distance <= 30) {
+                  distIndicator.textContent = `Within service zone: Approx. ${distance.toFixed(2)} KM away.`;
+                  distIndicator.style.color = "#22c55e";
+                } else {
+                  distIndicator.textContent = `Out of service limit: Approx. ${distance.toFixed(2)} KM away (Max 30 KM).`;
+                  distIndicator.style.color = "#ef4444";
+                }
+              },
+              (error) => {
+                console.error("Location error:", error);
+                btnGetLoc.disabled = false;
+                btnGetLoc.innerHTML = `
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Location Detection Failed
+                `;
+                btnGetLoc.style.background = "#fee2e2";
+                btnGetLoc.style.borderColor = "#ef4444";
+                showToast("Failed to fetch geolocation. Please input coordinates manually.", "error");
+              },
+              { enableHighAccuracy: true }
+            );
+          });
+        }
+
+        const btnPlaceOrder = document.getElementById("btn-place-order");
+        if (btnPlaceOrder) {
+          btnPlaceOrder.addEventListener("click", async () => {
+            const currentUser = auth.currentUser;
+            if (!currentUser) {
+              showToast("Please Sign In first to place an order.", "info");
+              handleLogin();
+              return;
+            }
+
+            const phone = document.getElementById("shipping-phone").value.trim();
+            const address = document.getElementById("shipping-address").value.trim();
+            const note = document.getElementById("shipping-notes").value.trim();
+
+            if (!phone || !address || coordinates.lat === null || coordinates.lng === null) {
+              showToast("Please complete all required fields and verify location.", "error");
+              return;
+            }
+
+            btnPlaceOrder.disabled = true;
+            btnPlaceOrder.innerHTML = `<div class="spinner" style="width:18px; height:18px; margin:0;"></div> Processing Order...`;
+
+            try {
+              const idToken = await currentUser.getIdToken();
+              const orderPayload = {
+                action: "CREATE_ORDER",
+                idToken: idToken,
+                product_details: JSON.stringify([{
+                  product_id: p.product_id,
+                  title: p.title,
+                  price: p.price,
+                  quantity: 1
+                }]),
+                total_amount: parseFloat(p.price),
+                shipping_phone: phone,
+                full_address: address,
+                latitude: coordinates.lat,
+                longitude: coordinates.lng,
+                customer_note: note
+              };
+
+              const response = await fetch(APPS_SCRIPT_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(orderPayload)
+              });
+
+              const result = await response.json();
+              if (result.success) {
+                showToast("Order placed successfully! Check notifications.", "success");
+                container.innerHTML = `
+                  <div style="text-align:center; padding:4rem 0;">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" style="margin-bottom:1rem;"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>
+                    <h2 style="font-weight:800; color:var(--text-dark);">Order Confirmed!</h2>
+                    <p style="color:var(--text-light); margin:10px 0;">Order ID: <strong style="color:var(--primary);">${result.order_id}</strong></p>
+                    <p style="color:var(--text-light); margin:10px 0 20px; font-size:0.9rem;">Push notifications will be sent to your device with shipping progress updates.</p>
+                    <a href="/p/store.html" class="btn-checkout" style="display:inline-flex; width:auto; text-decoration:none;">Browse More Products</a>
+                  </div>
+                `;
+              } else {
+                throw new Error(result.error || "Order insertion failed");
+              }
+            } catch (err) {
+              console.error("Order error:", err);
+              showToast(err.message || "Failed to place order. Try again.", "error");
+              btnPlaceOrder.disabled = false;
+              btnPlaceOrder.textContent = "Place Order";
+            }
+          });
+        }
+
+      } catch (err) {
+        console.error("Detail load error:", err);
+        showToast("Error loading product details.", "error");
+      }
+    }
+
+    async function renderAllProductsPage(container) {
+      currentStoreOffset = 0;
+      storeHasMore = true;
+      storeLoading = false;
+
+      container.innerHTML = `
+        <div class="store-header">
+          <h1 class="store-title">Explore Store & Products</h1>
+          <div class="store-filters">
+            <div class="filter-group" id="store-category-filters">
+              <span class="filter-chip active" data-category="">All</span>
+              <span class="filter-chip" data-category="Pipes">Pipes</span>
+              <span class="filter-chip" data-category="Tools">Tools</span>
+              <span class="filter-chip" data-category="Fittings">Fittings</span>
+              <span class="filter-chip" data-category="Repair">Repair</span>
+            </div>
+            <div class="filter-group">
+              <input type="text" placeholder="Search store..." class="store-search" id="store-search-bar" />
+              <select class="store-sort" id="store-sort-select">
+                <option value="created_at_desc">Newest First</option>
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="products-grid" id="store-products-grid"></div>
+        <div class="sentinel" id="infinite-scroll-sentinel">
+          <div class="spinner" id="store-loading-spinner" style="display:none;"></div>
+        </div>
+      `;
+
+      const chips = document.querySelectorAll("#store-category-filters .filter-chip");
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          currentCategory = chip.getAttribute("data-category");
+          reloadProductsGrid();
+        });
+      });
+
+      const searchBar = document.getElementById("store-search-bar");
+      if (searchBar) {
+        searchBar.value = currentSearch;
+        searchBar.addEventListener("input", debounce((e) => {
+          currentSearch = e.target.value;
+          reloadProductsGrid();
+        }, 300));
+      }
+
+      const sortSelect = document.getElementById("store-sort-select");
+      if (sortSelect) {
+        sortSelect.value = currentSort;
+        sortSelect.addEventListener("change", (e) => {
+          currentSort = e.target.value;
+          reloadProductsGrid();
+        });
+      }
+
+      await fetchNextProductBatch();
+
+      const sentinel = document.getElementById("infinite-scroll-sentinel");
+      const spinner = document.getElementById("store-loading-spinner");
+
+      if (sentinel) {
+        if (storeObserver) storeObserver.disconnect();
+        
+        storeObserver = new IntersectionObserver(async (entries) => {
+          if (entries[0].isIntersecting && storeHasMore && !storeLoading) {
+            spinner.style.display = "block";
+            await fetchNextProductBatch();
+            spinner.style.display = "none";
+          }
+        }, { rootMargin: "150px" });
+        
+        storeObserver.observe(sentinel);
+      }
+    }
+
+    async function reloadProductsGrid() {
+      const grid = document.getElementById("store-products-grid");
+      if (grid) grid.innerHTML = "";
+      currentStoreOffset = 0;
+      storeHasMore = true;
+      await fetchNextProductBatch();
+    }
+
+    async function fetchNextProductBatch() {
+      if (storeLoading || !storeHasMore) return;
+      storeLoading = true;
+
+      const grid = document.getElementById("store-products-grid");
+      if (!grid) return;
+
+      try {
+        let fetchUrl = `${APPS_SCRIPT_URL}?action=list_products&limit=${storeLimit}&offset=${currentStoreOffset}`;
+        if (currentCategory) fetchUrl += `&category=${encodeURIComponent(currentCategory)}`;
+        if (currentSearch) fetchUrl += `&search=${encodeURIComponent(currentSearch)}`;
+        if (currentSort) {
+          const parts = currentSort.split("_");
+          fetchUrl += `&sortBy=${parts[0]}&sortOrder=${parts[parts.length - 1]}`;
+        }
+
+        const response = await fetch(fetchUrl);
+        if (!response.ok) throw new Error("Batch fetch failed");
+        const data = await response.json();
+
+        if (data.success && data.products) {
+          const products = data.products;
+          if (products.length < storeLimit) {
+            storeHasMore = false;
+          }
+
+          if (products.length > 0) {
+            grid.insertAdjacentHTML("beforeend", products.map(product => `
+              <a href="/p/products.html?id=${product.product_id}" class="product-card">
+                <img src="${product.image_url || 'https://via.placeholder.com/300'}" alt="${product.title}" class="product-card-img" />
+                <div class="product-card-body">
+                  <span class="product-card-category">${product.category || 'General'}</span>
+                  <h4 class="product-card-title">${product.title}</h4>
+                  <span class="product-card-price">₹${product.price}</span>
+                </div>
+                <div class="product-card-btn">View Details</div>
+              </a>
+            `).join(""));
+            currentStoreOffset += products.length;
+          } else if (currentStoreOffset === 0) {
+            grid.innerHTML = `
+              <div style="grid-column:1/-1; text-align:center; padding:3rem 0; color:var(--text-light);">
+                No products found matching your search.
+              </div>
+            `;
+          }
+        } else {
+          throw new Error("API error response");
+        }
+      } catch (err) {
+        console.error("Batch load error:", err);
+        showToast("Error loading products listing.", "error");
+        storeHasMore = false;
+      } finally {
+        storeLoading = false;
+      }
+    }
+
+    window.addEventListener("popstate", initStoreRouter);
+    window.addEventListener("DOMContentLoaded", initStoreRouter);
+    initStoreRouter();
+
+    // Reactive Master Pipeline Controller Hook
+    onAuthStateChanged(auth, (user) => {
+      renderAuthState(user);
+      autoSyncDeviceSession(user);
+    });
+
+  //]]></script>
+</html>
